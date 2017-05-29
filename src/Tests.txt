@@ -1,0 +1,17 @@
+			
+		// Tests for getRandomStudent and getRandomPreference in preference table
+		StudentEntry studentEntry = new StudentEntry();
+		
+		System.out.println("\nRANDOM STUDENT: " + preferenceTable.getRandomStudent().getStudentName());
+		System.out.println("RANDOM PREFERENCE: " + preferenceTable.getRandomStudent().getRandomPreference());
+		System.out.println("RANDOM STUDENT: " + preferenceTable.getRandomStudent().getStudentName());
+		
+		// Tests for student entry
+		studentEntry = preferenceTable.getEntryFor("Wilkins Micawber");
+		System.out.println("\nName: " + studentEntry.getStudentName());
+		System.out.println("Number of stated preferences: " + studentEntry.getNumberOfStatedPreferences());
+		System.out.println("Preferences: " + studentEntry.getOrderedPreferences());
+		
+		String preference = studentEntry.getRandomPreference();
+		System.out.println("Random Preference: " + preference);
+		System.out.println("Has preference? : " + studentEntry.hasPreference(preference));
